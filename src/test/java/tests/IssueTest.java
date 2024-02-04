@@ -3,9 +3,9 @@ package tests;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.*;
+import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import io.qameta.allure.selenide.AllureSelenide;
 
 import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.$;
@@ -65,6 +65,7 @@ public class IssueTest {
             $(withText(ISSUE_NAME)).should(Condition.exist);
         });
     }
+
     @Test
     @Feature("Issue в репозитории #2")
     @Story("Поиск Issue")
